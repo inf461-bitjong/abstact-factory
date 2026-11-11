@@ -1,0 +1,390 @@
+<dia:diagram xmlns:dia="http://www.topgraph.org/resources/hetero-shapes/1.0#">
+dia:diagramdata
+<dia:attribute name="background">
+<dia:color val="#ffffff"/>
+</dia:attribute>
+<dia:attribute name="pagebreak">
+<dia:color val="#000000"/>
+</dia:attribute>
+<dia:attribute name="paper">
+<dia:composite type="paper">
+<dia:attribute name="name">
+dia:string#A4#</dia:string> </dia:attribute> <dia:attribute name="tmargin"> <dia:real val="1"/> </dia:attribute> <dia:attribute name="bmargin"> <dia:real val="1"/> </dia:attribute> <dia:attribute name="lmargin"> <dia:real val="1"/> </dia:attribute> <dia:attribute name="rmargin"> <dia:real val="1"/> </dia:attribute> <dia:attribute name="is_portrait"> <dia:boolean val="true"/> </dia:attribute> </dia:composite> </dia:attribute> <dia:attribute name="grid"> <dia:composite type="grid"> <dia:attribute name="width_x"> <dia:real val="1"/> </dia:attribute> <dia:attribute name="width_y"> <dia:real val="1"/> </dia:attribute> <dia:attribute name="visible_x"> <dia:int val="1"/> </dia:attribute> <dia:attribute name="visible_y"> <dia:int val="1"/> </dia:attribute> </dia:composite> </dia:attribute> </dia:diagramdata> <dia:layer name="Arrière-plan" visible="true" active="true">
+
+<!-- Client -->
+<dia:object type="UML - Class" id="O0" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="18,2"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#Client#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#main#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="visibility">
+          <dia:enum val="0"/>
+        </dia:attribute>
+        <dia:attribute name="class_scope">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="parameters">
+          <dia:list>
+            <dia:composite type="umlparameter">
+              <dia:attribute name="name">
+                <dia:string>#args#</dia:string>
+              </dia:attribute>
+              <dia:attribute name="type">
+                <dia:string>#String[]#</dia:string>
+              </dia:attribute>
+            </dia:composite>
+          </dia:list>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- IProduitFactory -->
+<dia:object type="UML - Class" id="O1" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="17,10"/>
+  </dia:attribute>
+  <dia:attribute name="stereotype">
+    <dia:string>#interface#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#IProduitFactory#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#getProduitA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#ProduitA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="abstract">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+      </dia:composite>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#getProduitB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#ProduitB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="abstract">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitA (Abstract) -->
+<dia:object type="UML - Class" id="O2" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="5,10"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitA#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="abstract">
+    <dia:boolean val="true"/>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#methodeA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="abstract">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitB (Abstract) -->
+<dia:object type="UML - Class" id="O3" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="31,10"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitB#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="abstract">
+    <dia:boolean val="true"/>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#methodeB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="abstract">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitFactory1 -->
+<dia:object type="UML - Class" id="O4" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="12,19"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitFactory1#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#getProduitA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#ProduitA#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#getProduitB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#ProduitB#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitFactory2 -->
+<dia:object type="UML - Class" id="O5" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="22,19"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitFactory2#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#getProduitA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#ProduitA#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#getProduitB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#ProduitB#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitA1 -->
+<dia:object type="UML - Class" id="O6" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="2,19"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitA1#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#methodeA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitA2 -->
+<dia:object type="UML - Class" id="O7" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="7,26"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitA2#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#methodeA#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitB1 -->
+<dia:object type="UML - Class" id="O8" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="28,19"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitB1#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#methodeB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- ProduitB2 -->
+<dia:object type="UML - Class" id="O9" version="0" rel_width="1" rel_height="1">
+  <dia:attribute name="obj_pos">
+    <dia:point val="34,26"/>
+  </dia:attribute>
+  <dia:attribute name="name">
+    <dia:string>#ProduitB2#</dia:string>
+  </dia:attribute>
+  <dia:attribute name="operations">
+    <dia:list>
+      <dia:composite type="umloperation">
+        <dia:attribute name="name">
+          <dia:string>#methodeB#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="type">
+          <dia:string>#void#</dia:string>
+        </dia:attribute>
+      </dia:composite>
+    </dia:list>
+  </dia:attribute>
+</dia:object>
+
+<!-- Generalizations (Inheritances) -->
+<dia:object type="UML - Generalization" id="O10" version="0">
+  <dia:connections>
+    <dia:connection handle="0" to="O2" connection="6"/>
+    <dia:connection handle="1" to="O6" connection="1"/>
+  </dia:connections>
+</dia:object>
+<dia:object type="UML - Generalization" id="O11" version="0">
+  <dia:connections>
+    <dia:connection handle="0" to="O2" connection="6"/>
+    <dia:connection handle="1" to="O7" connection="1"/>
+  </dia:connections>
+</dia:object>
+<dia:object type="UML - Generalization" id="O12" version="0">
+  <dia:connections>
+    <dia:connection handle="0" to="O3" connection="6"/>
+    <dia:connection handle="1" to="O8" connection="1"/>
+  </dia:connections>
+</dia:object>
+<dia:object type="UML - Generalization" id="O13" version="0">
+  <dia:connections>
+    <dia:connection handle="0" to="O3" connection="6"/>
+    <dia:connection handle="1" to="O9" connection="1"/>
+  </dia:connections>
+</dia:object>
+
+<!-- Realizations (Implements) -->
+<dia:object type="UML - Realizes" id="O14" version="0">
+  <dia:connections>
+    <dia:connection handle="0" to="O1" connection="6"/>
+    <dia:connection handle="1" to="O4" connection="1"/>
+  </dia:connections>
+</dia:object>
+<dia:object type="UML - Realizes" id="O15" version="0">
+  <dia:connections>
+    <dia:connection handle="0" to="O1" connection="6"/>
+    <dia:connection handle="1" to="O5" connection="1"/>
+  </dia:connections>
+</dia:object>
+
+<!-- Dependencies (instantiate & use) -->
+<dia:object type="UML - Dependency" id="O16" version="0">
+  <dia:attribute name="stereotype">
+    <dia:string>#use#</dia:string>
+  </dia:attribute>
+  <dia:connections>
+    <dia:connection handle="0" to="O1" connection="1"/>
+    <dia:connection handle="1" to="O0" connection="6"/>
+  </dia:connections>
+</dia:object>
+
+<dia:object type="UML - Dependency" id="O17" version="0">
+  <dia:attribute name="stereotype">
+    <dia:string>#instantiate#</dia:string>
+  </dia:attribute>
+  <dia:connections>
+    <dia:connection handle="0" to="O6" connection="3"/>
+    <dia:connection handle="1" to="O4" connection="2"/>
+  </dia:connections>
+</dia:object>
+
+<dia:object type="UML - Dependency" id="O18" version="0">
+  <dia:attribute name="stereotype">
+    <dia:string>#instantiate#</dia:string>
+  </dia:attribute>
+  <dia:connections>
+    <dia:connection handle="0" to="O8" connection="2"/>
+    <dia:connection handle="1" to="O4" connection="3"/>
+  </dia:connections>
+</dia:object>
+
+<dia:object type="UML - Dependency" id="O19" version="0">
+  <dia:attribute name="stereotype">
+    <dia:string>#instantiate#</dia:string>
+  </dia:attribute>
+  <dia:connections>
+    <dia:connection handle="0" to="O7" connection="3"/>
+    <dia:connection handle="1" to="O5" connection="2"/>
+  </dia:connections>
+</dia:object>
+
+<dia:object type="UML - Dependency" id="O20" version="0">
+  <dia:attribute name="stereotype">
+    <dia:string>#instantiate#</dia:string>
+  </dia:attribute>
+  <dia:connections>
+    <dia:connection handle="0" to="O9" connection="2"/>
+    <dia:connection handle="1" to="O5" connection="3"/>
+  </dia:connections>
+</dia:object>
+
+
+</dia:layer>
+</dia:diagram>

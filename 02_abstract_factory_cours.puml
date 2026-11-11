@@ -1,0 +1,42 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Client{
++ {static} main(args : String[]) : void
+}
+class ProduitA1{
++ methodeA() : void
+}
+ProduitA1 --|> ProduitA
+class ProduitB1{
++ methodeB() : void
+}
+ProduitB1 --|> ProduitB
+class ProduitFactory1{
++ getProduitA() : ProduitA
++ getProduitB() : ProduitB
+}
+ProduitFactory1 ..|> IProduitFactory
+class ProduitB2{
++ methodeB() : void
+}
+ProduitB2 --|> ProduitB
+class ProduitFactory2{
++ getProduitA() : ProduitA
++ getProduitB() : ProduitB
+}
+ProduitFactory2 ..|> IProduitFactory
+class ProduitA2{
++ methodeA() : void
+}
+ProduitA2 --|> ProduitA
+class ProduitA{
++ {abstract} methodeA() : void
+}
+class ProduitB{
++ {abstract} methodeB() : void
+}
+interface IProduitFactory{
+getProduitA() : ProduitA
+getProduitB() : ProduitB
+}
+@enduml
